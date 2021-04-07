@@ -101,7 +101,6 @@
       }
     </style>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
   </head>
   <body>
 
@@ -119,6 +118,7 @@
       <div><img class="thumb" src="thumbs/koala.png"></div>
       <div><img class="thumb" src="thumbs/lion.png"></div>
       <div><img class="thumb" src="thumbs/teddy_cigar.png"></div>
+      <div><img class="thumb" src="">beauty</div>
     </div>
 
 
@@ -256,10 +256,12 @@
           './effects/flowers',
           './effects/koala',
           './effects/lion',
-          './effects/teddycigar'
+          './effects/teddycigar',
+          './effects/beauty',
         ];
 
         $('.effect-carousel').on('afterChange', function(event, slick, currentSlide){
+          console.log(currentSlide)
           deepAR.switchEffect(0, 'slot', effects[currentSlide]);
         });
 
